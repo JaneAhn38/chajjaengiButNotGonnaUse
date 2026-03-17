@@ -129,7 +129,7 @@
         .then(function(r) { return r.json(); })
         .then(function(data) {
             var gyeonggi = data.features
-                .filter(function(f) { return (f.properties.code || '').startsWith('41'); })
+                .filter(function(f) { return (f.properties.code || '').startsWith('31'); })
                 .map(toMainPolygon);
 
             gyeonggiLayer = L.geoJSON({ type: 'FeatureCollection', features: gyeonggi }, {
@@ -175,7 +175,7 @@
             .then(function(r) { return r.json(); })
             .then(function(data) {
                 var gyeonggi = data.features
-                    .filter(function(f) { return (f.properties.code || '').startsWith('41'); })
+                    .filter(function(f) { return (f.properties.code || '').startsWith('31'); })
                     .map(toMainPolygon);
                 gyeonggiDongLayer = L.geoJSON({ type: 'FeatureCollection', features: gyeonggi }, {
                     style: { fillColor: GYEONGGI_COLOR, fillOpacity: 0.7, color: '#fff', weight: 0.8 }
